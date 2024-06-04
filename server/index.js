@@ -11,3 +11,4 @@ app.post('/register', async (req, res) => {
 });
 
 // Placeholder for improved database error handling
+// Project planning and initial setup
