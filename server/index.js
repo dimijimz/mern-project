@@ -10,3 +10,7 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 // TODO: Connect to MongoDB database
+
+const cors = require('cors');
+app.use(cors());
+
