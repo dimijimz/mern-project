@@ -1,14 +1,11 @@
 
-app.post('/register', async (req, res) => {
-    const { username, password } = req.body;
-    const userExists = await User.findOne({ username });
-    if (userExists) return res.status(400).send({ error: 'Username already taken' });
+const express = require('express');
+const app = express();
+const PORT = 5000;
 
-    const hashedPassword = await hashPassword(password);
-    const newUser = new User({ username, password: hashedPassword });
-    await newUser.save();
-    res.status(201).send({ message: 'User registered successfully' });
+app.get('/', (req, res) => {
+    res.send('Welcome to the MERN project!');
 });
 
-// Placeholder for improved database error handling
-// Project planning and initial setup
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
