@@ -14,3 +14,4 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 const cors = require('cors');
 app.use(cors());
 
+// TODO: Define API routes for user registration and login
