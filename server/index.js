@@ -18,3 +18,9 @@ app.use(cors());
 // Placeholder for user authentication setup
 // Plan to implement JWT authentication
 const bcrypt = require('bcryptjs');
+
+async function hashPassword(password) {
+    const salt = await bcrypt.genSalt(10);
+    return await bcrypt.hash(password, salt);
+}
+
