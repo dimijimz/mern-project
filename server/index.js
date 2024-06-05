@@ -25,3 +25,4 @@ async function hashPassword(password) {
 }
 
 // TODO: Implement user registration endpoint
+// Plan MongoDB schema for user model
