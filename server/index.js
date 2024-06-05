@@ -24,3 +24,4 @@ async function hashPassword(password) {
     return await bcrypt.hash(password, salt);
 }
 
+// TODO: Implement user registration endpoint
