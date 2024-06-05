@@ -21,3 +21,9 @@ function LoginForm() {
 
 export default LoginForm;
 
+
+const handleLogin = async () => {
+    // Placeholder for login API call
+    console.log('Logging in with', username, password);
+};
+
