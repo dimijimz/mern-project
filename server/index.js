@@ -45,3 +45,14 @@ app.post('/register', async (req, res) => {
 
 // Placeholder for JWT generation in login route
 const jwt = require('jsonwebtoken');
+
+app.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+    const user = await User.findOne({ username });
+
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    const token = jwt.sign({ id: user._id }, 'your_jwt_secret');
+    res.send({ message: 'Login successful', token });
+});
+
