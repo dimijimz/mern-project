@@ -28,3 +28,18 @@ async function hashPassword(password) {
 // Plan MongoDB schema for user model
 // TODO: Implement login endpoint
 // Plan to add input validation for registration and login
+
+const User = require('./models/User');
+
+app.post('/register', async (req, res) => {
+    const { username, password } = req.body;
+    const hashedPassword = await hashPassword(password);
+    const newUser = new User({ username, password: hashedPassword });
+    try {
+        await newUser.save();
+        res.status(201).send({ message: 'User registered successfully' });
+    } catch (err) {
+        res.status(400).send({ error: 'User registration failed' });
+    }
+});
+
