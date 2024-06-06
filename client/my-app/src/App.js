@@ -13,3 +13,4 @@ function App() {
 export default App;
 
 // Plan to add Redux for state management
+// Plan to create user profile feature
