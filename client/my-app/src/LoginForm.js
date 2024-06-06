@@ -27,3 +27,15 @@ const handleLogin = async () => {
     console.log('Logging in with', username, password);
 };
 
+
+const handleLogin = async () => {
+    try {
+        // Placeholder for API call to authenticate and get token
+        const token = 'sample_token';
+        localStorage.setItem('token', token);
+        console.log('Login successful, token stored');
+    } catch (error) {
+        console.error('Login failed');
+    }
+};
+
