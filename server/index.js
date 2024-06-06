@@ -43,3 +43,4 @@ app.post('/register', async (req, res) => {
     }
 });
 
+// Placeholder for JWT generation in login route
